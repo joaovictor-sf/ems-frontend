@@ -21,3 +21,11 @@ export const listEmployees = () => axios.get(REST_API_BASE_URL);
 //Por exemplo, se você tiver uma função que adicione dois números, você pode exportar a função diretamente.
 //Se você tiver uma função que manipula um objeto, é melhor exportar a classe.
 //Se você tiver várias funções que manipulam um objeto, é melhor exportar um objeto com várias funções.
+
+export const createEmployee = (employee) => axios.post(REST_API_BASE_URL, employee);
+
+export const getEmployeeById = (employeeId) => axios.get(REST_API_BASE_URL + '/' + employeeId);
+
+export const updateEmployee = (employee, employeeId) => axios.put(REST_API_BASE_URL + '/' + employeeId, employee);
+
+export const deleteEmployee = (employeeId) => axios.delete(REST_API_BASE_URL + '/' + employeeId);

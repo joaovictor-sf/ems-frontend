@@ -13,8 +13,10 @@ function App() {
         <HeaderComp/>
         <Routes>{/*Routes é onde ficam as rotas da aplicação*/}
             <Route path="/" element={<ListEmployee/>}/>{/*Route é onde definimos uma rota, o path é o caminho da rota e o element é o componente que será renderizado. Neste caso, o componente ListEmployee será renderizado quando a rota for a raiz da aplicação*/}
+            <Route path="/employees" element={<ListEmployee/>}/>
             
             <Route path="/add-employee" element={<EmployeeComp/>}/>
+            <Route path="/edit-employee/:id" element={<EmployeeComp/>}/>
         </Routes>
         <FooterComp/>
     </BrowserRouter>
